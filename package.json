@@ -1,0 +1,36 @@
+{
+    "name": "zdemo_ui5",
+    "version": "0.0.1",
+    "private": true,
+    "description": "Банковские данные по сотрудникам",
+    "keywords": [
+        "ui5",
+        "openui5",
+        "sapui5"
+    ],
+    "main": "webapp/index.html",
+    "dependencies": {},
+    "devDependencies": {
+        "@ui5/cli": "^2.14.1",
+        "@sap/ux-ui5-tooling": "1",
+        "@sap/ux-ui5-fe-mockserver-middleware": "1",
+        "rimraf": "3.0.2",
+        "eslint": "^8.13.0",
+        "eslint-config-xo": "^0.40.0"
+    },
+    "scripts": {
+        "start": "fiori run --open 'index.html?sap-client=100'",
+        "start-local": "fiori run --config ./ui5-local.yaml --open 'index.html?sap-client=100'",
+        "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
+        "deploy": "npm run build && fiori deploy --config ui5-deploy.yaml && rimraf archive.zip",
+        "deploy-config": "fiori add deploy-config",        
+        "undeploy": "fiori undeploy --config ui5-deploy.yaml"        
+    },
+    "ui5": {
+        "dependencies": [
+            "@sap/ux-ui5-tooling",
+            "@sap/ux-ui5-fe-mockserver-middleware"
+        ]
+    },
+    "sapuxLayer": "CUSTOMER_BASE"
+}
