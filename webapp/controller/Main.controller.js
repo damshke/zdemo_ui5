@@ -8,7 +8,7 @@ sap.ui.define([
 	MessageBox) {
         "use strict";
 
-        return Controller.extend("zdemo_ui5.controller.App", {
+        return Controller.extend("zdemo_ui5.controller.Main", {
 
             onInit: function () {
 
@@ -20,16 +20,16 @@ sap.ui.define([
 
             },
 
-            /* onReportChange: function (oEvent) {
+            onReportChange: function (oEvent) {
 
                 var selectedRowContext = oEvent.getParameter("rowContext");
                 var sPath = selectedRowContext.getPath();
 
                 var oReportTable = this.byId("idReportTable");
                 oReportTable.bindElement(sPath);
-            }, */
+            },
 
-            /* onCancelEmployee: function (oEvent) {
+            onCancelEmployee: function (oEvent) {
                 var ID = oEvent.getSource().data("objid");
                 var oModel = this.getView().getModel();
 
@@ -45,9 +45,9 @@ sap.ui.define([
                         });
                     }
                 });
-            }, */
+            },
 
-           /*  onCreateEmployee: function (oEvent) {
+            onCreateEmployee: function (oEvent) {
 
                 var ID = oEvent.getSource().data("objid");
                 var Surname = oEvent.getSource().data("surname");
@@ -64,11 +64,6 @@ sap.ui.define([
                 oModel.create("/")
 
 
-            } */
+            }
         });
 });
-
-/* упражнение к 12 модулю 
-   реализована только табличка, так как 
-   возможности изменять, добавлять, фильтровать и т. д.
-   в OData модели нет */

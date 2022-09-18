@@ -1,7 +1,7 @@
 {
   "_version": "1.17.0",
   "sap.app": {
-    "id": "ssg.lk.zdemo",
+    "id": "zdemo_ui5",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -16,11 +16,10 @@
     },
     "dataSources": {
       "mainService": {
-        "uri": "/sap/opu/odata/sap/ZDEMO_SRV/",
+        "uri": "/sap/opu/odata/sap/zintzrobjstat_srv/",
         "type": "OData",
         "settings": {
           "annotations": [],
-          "localUri": "localService/metadata.xml",
           "odataVersion": "2.0"
         }
       }
@@ -45,7 +44,7 @@
   "sap.ui5": {
     "flexEnabled": true,
     "dependencies": {
-      "minUI5Version": "1.71.21",
+      "minUI5Version": "1.71.50",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
@@ -65,14 +64,17 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "ssg.lk.zdemo.i18n.i18n"
+          "bundleName": "zdemo_ui5.i18n.i18n"
         }
       },
-      "zdemo_srv": {
+      "": {
         "dataSource": "mainService",
-        "preload": true,
-        "settings": {}
-      }
+        "settings": {
+            "defaultUpdateMethod": "PUT",
+            "defaultCountMode": "Request"
+        },
+        "preload": true
+    }
     },
     "resources": {
       "css": [
@@ -86,7 +88,7 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "async": true,
-        "viewPath": "ssg.lk.zdemo.view",
+        "viewPath": "zdemo_ui5.view",
         "controlAggregation": "pages",
         "controlId": "app",
         "clearControlAggregation": false
@@ -111,7 +113,7 @@
       }
     },
     "rootView": {
-      "viewName": "ssg.lk.zdemo.view.App",
+      "viewName": "zdemo_ui5.view.App",
       "type": "XML",
       "async": true,
       "id": "App"

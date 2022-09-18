@@ -4,7 +4,7 @@ sap.ui.define([
     function (UIComponent) {
         "use strict";
 
-        return UIComponent.extend("ssg.lk.zdemo.Component", {
+        return UIComponent.extend("zdemo_ui5.webapp.Component", {
             metadata: {
                 manifest: "json"
             },

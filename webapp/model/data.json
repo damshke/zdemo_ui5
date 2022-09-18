@@ -1,0 +1,11 @@
+[
+    {"carrId":"1", "connId":"34", "cityFrom":"Moscow", "cityTo":"Volgograd" },
+    {"carrId":"2", "connId":"35", "cityFrom":"Moscow", "cityTo":"Saint Petersburg" },
+    {"carrId":"3", "connId":"36", "cityFrom":"Moscow", "cityTo":"Penza" },
+    {"carrId":"4", "connId":"37", "cityFrom":"Moscow", "cityTo":"New York" },
+    {"carrId":"5", "connId":"38", "cityFrom":"Moscow", "cityTo":"Vladivostok" },
+    {"carrId":"6", "connId":"39", "cityFrom":"Moscow", "cityTo":"Voronezh" },
+    {"carrId":"7", "connId":"40", "cityFrom":"Penza", "cityTo":"Volgograd" },
+    {"carrId":"8", "connId":"41", "cityFrom":"Saint Petersburg", "cityTo":"Volgograd" },
+    {"carrId":"9", "connId":"42", "cityFrom":"Vladivostok", "cityTo":"Volgograd" }
+]

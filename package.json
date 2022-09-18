@@ -9,22 +9,25 @@
         "sapui5"
     ],
     "main": "webapp/index.html",
-    "dependencies": {},
+    "dependencies": {
+        "@openui5/sap.m": "^1.105.0",
+        "@openui5/sap.ui.core": "^1.105.0"
+    },
     "devDependencies": {
-        "@ui5/cli": "^2.14.1",
-        "@sap/ux-ui5-tooling": "1",
         "@sap/ux-ui5-fe-mockserver-middleware": "1",
-        "rimraf": "3.0.2",
+        "@sap/ux-ui5-tooling": "^1.7.3",
+        "@ui5/cli": "^2.14.11",
         "eslint": "^8.13.0",
-        "eslint-config-xo": "^0.40.0"
+        "eslint-config-xo": "^0.40.0",
+        "rimraf": "3.0.2"
     },
     "scripts": {
         "start": "fiori run --open 'index.html?sap-client=100'",
         "start-local": "fiori run --config ./ui5-local.yaml --open 'index.html?sap-client=100'",
         "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
         "deploy": "npm run build && fiori deploy --config ui5-deploy.yaml && rimraf archive.zip",
-        "deploy-config": "fiori add deploy-config",        
-        "undeploy": "fiori undeploy --config ui5-deploy.yaml"        
+        "deploy-config": "fiori add deploy-config",
+        "undeploy": "fiori undeploy --config ui5-deploy.yaml"
     },
     "ui5": {
         "dependencies": [
