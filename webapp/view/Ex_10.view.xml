@@ -1,0 +1,17 @@
+<mvc:View controllerName="zdemo_ui5.controller.Ex_10" 
+xmlns:mvc="sap.ui.core.mvc" 
+displayBlock="true" 
+xmlns="sap.m" 
+xmlns:f="sap.ui.layout.form"
+xmlns:core="sap.ui.core">
+
+    <f:SimpleForm>
+        <f:content>
+            <Label text="{i18n>flightRatingLabel}"/>
+            <RatingIndicator change="onRatingChange"/>
+            <Text id="idText"/>
+
+        </f:content>
+    </f:SimpleForm>
+
+</mvc:View>

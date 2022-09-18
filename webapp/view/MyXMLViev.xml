@@ -1,0 +1,11 @@
+<mvc:View controllerName="zdemo_ui5.controller.MyXMLView"
+           xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+           xmlns="sap.m">
+           <Text text="Какой-то текст для XML View"/>
+           <CheckBox id="idCheckBox" text="No" select="onCBSelect"/>
+           <mvc:JSView id="idJSView" viewName="zdemo_ui5.webapp.view.MyJSView.view.js"/>
+
+
+</mvc:View>
+
+<!-- упражнение к 6 модулю -->

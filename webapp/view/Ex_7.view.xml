@@ -1,0 +1,42 @@
+<mvc:View controllerName="zdemo_ui5.webapp.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core"
+xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
+
+		<pages>
+			<Page title="Упражнение 7. Layout Control">
+			<content>
+				<Panel headerText="Простая формочка"
+					   class="sapUiResponsiveContentPadding">
+					<content>
+						<f:SimpleForm layout="ResponsiveGridLayout">
+							<f:content>
+								<core:Title text="Введите название маршрута и номер"/>
+								<Label text="Название маршрута">
+									<layoutData><l:GridData span="L2 M4 S12"/></layoutData>
+								</Label>
+								<Input>
+									<layoutData><l:GridData span="L10 M8 S12"/></layoutData>
+								</Input>
+								<Label text="Номер">
+									<layoutData><l:GridData span="L2 M4 S12"/></layoutData>
+								</Label>
+								<Input>
+									<layoutData><l:GridData span="L10 M8 S12"/></layoutData>
+								</Input>
+								<Button text="Submit">
+									<layoutData><l:GridData indent="M4" span="L2 M8 S12"/></layoutData>
+								</Button>
+							</f:content>
+							<f:title>
+								<core:Title text="Готово!"/>
+							</f:title>
+						</f:SimpleForm>
+						<Image src="pic/ex_7.png"
+							   width="20%"
+							   class="sapUiHideOnPhone"/>
+					</content>
+				</Panel>
+			</content>
+			</Page>
+		</pages>
+
+</mvc:View>

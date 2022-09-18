@@ -1,0 +1,31 @@
+<mvc:View controllerName="zdemo_ui5.controller.Ex_9_2"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	displayBlock="true"
+	xmlns:f="sap.ui.layout.form">
+
+   <Carousel pages="{connections>/data}">
+       <pages>
+            <f:SimpleForm>
+                <f:content>
+                    <Label text="Carrier"/>
+                    <Text text="{connections>carrId}"/>
+                    <Label text="Flight number"/>
+                    <Text text="{connections>connId}"/>
+                    <Label text="Departure"/>
+                    <Text text="{connections>cityFrom}"/>
+                    <Label text="Destinations"/>
+                    <Text text="{connections>cityTo}"/>
+                </f:content>
+            </f:SimpleForm>
+       </pages>
+   </Carousel>
+
+   <List items="{connections>/data}">
+       <items>
+            <StandardListItem adaptTitleSize="true"
+                description="From {connections>cityFrom}  to {connections>cituTo}"
+                title="{connections>carrId} {connections>/connId}"/>
+       </items>
+   </List>
+</mvc:View>
